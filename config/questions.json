@@ -1,0 +1,820 @@
+{
+  "app": {
+    "title": {
+      "tr": "Kişiye Özel Boyama Kitabı Talep Anketi",
+      "ar": "استبيان طلب كتاب تلوين مخصص للأطفال"
+    },
+    "subtitle": {
+      "tr": "Çocuğun seçilen tema içinde kendi özel boyama kitabının kahramanı olduğu yeni ürün fikrini birlikte test ediyoruz.",
+      "ar": "نختبر معكم فكرة منتج جديد يكون فيه الطفل بطل كتاب تلوين مخصص حسب الثيمة المختارة."
+    },
+    "intro": {
+      "tr": [
+        "Merhaba! Çocuklara özel kişiselleştirilmiş boyama kitapları geliştirmeyi planlıyoruz.",
+        "Bu üründe çocuğun fotoğrafı ve seçilen tema kullanılarak ona özel bir boyama kitabı hazırlanır. Örneğin çocuk astronot, polis, süper kahraman veya dinozor kaşifi gibi temalarda kendi özel boyama kitabının kahramanı olabilir.",
+        "Bu anket yaklaşık 2-4 dakika sürer. Cevaplarınız ürün fikrini geliştirmemize doğrudan katkı sağlayacaktır."
+      ],
+      "ar": [
+        "مرحبا! نخطط لتطوير كتب تلوين مخصصة للأطفال.",
+        "في هذا المنتج يتم إعداد كتاب تلوين خاص بالطفل باستخدام صورته والثيمة المختارة. يمكن للطفل مثلا أن يكون بطل كتابه الخاص كثيمات رائد فضاء أو شرطي أو بطل خارق أو مستكشف ديناصورات.",
+        "يستغرق هذا الاستبيان حوالي 2-4 دقائق. ستساعدنا إجاباتكم مباشرة في تطوير فكرة المنتج."
+      ]
+    },
+    "thank_you": {
+      "tr": {
+        "title": "Teşekkürler!",
+        "body": "Zaman ayırdığınız için çok teşekkür ederiz. Görüşleriniz, ürünü gerçek kullanıcı ihtiyaçlarına göre geliştirmemize yardımcı olacak."
+      },
+      "ar": {
+        "title": "شكرا لكم!",
+        "body": "شكرا جزيلا على وقتكم. ستساعدنا آراؤكم في تطوير المنتج حسب احتياجات المستخدمين الحقيقية."
+      }
+    }
+  },
+  "products": [
+    {
+      "id": "product_a",
+      "title": {
+        "tr": "Ürün A - Kişiye Özel Normal Boyama Kitabı",
+        "ar": "المنتج A - كتاب تلوين عادي مخصص"
+      },
+      "description": {
+        "tr": "Çocuğun fotoğrafı ve seçilen tema kullanılarak klasik boyama sayfaları oluşturulur.",
+        "ar": "يتم إنشاء صفحات تلوين كلاسيكية باستخدام صورة الطفل والثيمة المختارة."
+      }
+    },
+    {
+      "id": "product_b",
+      "title": {
+        "tr": "Ürün B - Kişiye Özel Sayılarla Boyama Kitabı",
+        "ar": "المنتج B - كتاب تلوين بالأرقام مخصص"
+      },
+      "description": {
+        "tr": "Çocuğun fotoğrafı ve seçilen tema kullanılarak numaralandırılmış boyama sayfaları ve renk rehberi oluşturulur.",
+        "ar": "يتم إنشاء صفحات تلوين مرقمة ودليل ألوان باستخدام صورة الطفل والثيمة المختارة."
+      }
+    }
+  ],
+  "sections": [
+    {
+      "id": "profile",
+      "title": {
+        "tr": "Bölüm 1 - Katılımcı Profili",
+        "ar": "القسم 1 - ملف المشارك"
+      },
+      "questions": [
+        {
+          "id": "q_child_age",
+          "code": "S1",
+          "type": "multi",
+          "required": true,
+          "prompt": {
+            "tr": "Kaç yaşında çocuğunuz var?",
+            "ar": "ما الفئة العمرية لطفلك؟"
+          },
+          "options": [
+            {
+              "value": "0_3",
+              "label": {
+                "tr": "0-3 yaş",
+                "ar": "0-3 سنوات"
+              }
+            },
+            {
+              "value": "4_6",
+              "label": {
+                "tr": "4-6 yaş",
+                "ar": "4-6 سنوات"
+              }
+            },
+            {
+              "value": "7_10",
+              "label": {
+                "tr": "7-10 yaş",
+                "ar": "7-10 سنوات"
+              }
+            },
+            {
+              "value": "11_14",
+              "label": {
+                "tr": "11-14 yaş",
+                "ar": "11-14 سنة"
+              }
+            },
+            {
+              "value": "gift_no_child",
+              "label": {
+                "tr": "Çocuğum yok ama hediye almayı düşünebilirim",
+                "ar": "ليس لدي طفل لكن قد أفكر بشرائه كهدية"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_coloring_interest",
+          "code": "S2",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Çocuğunuz boyama veya çizim aktivitelerine ilgi duyuyor mu?",
+            "ar": "هل يهتم طفلك بأنشطة التلوين أو الرسم؟"
+          },
+          "options": [
+            {
+              "value": "loves",
+              "label": {
+                "tr": "Evet, çok seviyor",
+                "ar": "نعم، يحبها كثيرا"
+              }
+            },
+            {
+              "value": "sometimes",
+              "label": {
+                "tr": "Ara sıra yapıyor",
+                "ar": "يفعل ذلك أحيانا"
+              }
+            },
+            {
+              "value": "low_interest",
+              "label": {
+                "tr": "Pek ilgisi yok",
+                "ar": "لا يهتم كثيرا"
+              }
+            },
+            {
+              "value": "not_tried",
+              "label": {
+                "tr": "Henüz denemedi",
+                "ar": "لم يجرب بعد"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "interest",
+      "title": {
+        "tr": "Bölüm 2 - İlgi ve Tercih",
+        "ar": "القسم 2 - الاهتمام والتفضيل"
+      },
+      "questions": [
+        {
+          "id": "q_product_interest",
+          "code": "S3",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Bu ürün fikri ilginizi çekiyor mu?",
+            "ar": "هل تجذبك فكرة هذا المنتج؟"
+          },
+          "options": [
+            {
+              "value": "very_interested",
+              "label": {
+                "tr": "Çok ilgimi çekiyor",
+                "ar": "تجذبني كثيرا"
+              }
+            },
+            {
+              "value": "somewhat_interested",
+              "label": {
+                "tr": "Biraz ilgimi çekiyor",
+                "ar": "تجذبني قليلا"
+              }
+            },
+            {
+              "value": "undecided",
+              "label": {
+                "tr": "Kararsızım",
+                "ar": "متردد"
+              }
+            },
+            {
+              "value": "not_much",
+              "label": {
+                "tr": "Pek ilgimi çekmiyor",
+                "ar": "لا تجذبني كثيرا"
+              }
+            },
+            {
+              "value": "not_at_all",
+              "label": {
+                "tr": "Hiç ilgimi çekmiyor",
+                "ar": "لا تجذبني إطلاقا"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_format_preference",
+          "code": "S4",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Hangi format size daha cazip geliyor?",
+            "ar": "أي صيغة تبدو أكثر جاذبية لك؟"
+          },
+          "options": [
+            {
+              "value": "normal_coloring",
+              "label": {
+                "tr": "Kişiye özel normal boyama kitabı",
+                "ar": "كتاب تلوين عادي مخصص"
+              }
+            },
+            {
+              "value": "number_coloring",
+              "label": {
+                "tr": "Kişiye özel sayılarla boyama kitabı",
+                "ar": "كتاب تلوين بالأرقام مخصص"
+              }
+            },
+            {
+              "value": "both",
+              "label": {
+                "tr": "Her ikisi de",
+                "ar": "كلاهما"
+              }
+            },
+            {
+              "value": "not_sure",
+              "label": {
+                "tr": "Emin değilim",
+                "ar": "لست متأكدا"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_themes",
+          "code": "S5",
+          "type": "multi",
+          "required": true,
+          "allow_other": true,
+          "prompt": {
+            "tr": "Hangi temaları görmek isterdiniz? Çoklu seçim yapabilirsiniz.",
+            "ar": "ما الثيمات التي ترغب في رؤيتها؟ يمكنك اختيار أكثر من خيار."
+          },
+          "options": [
+            {
+              "value": "original_photo",
+              "label": {
+                "tr": "Temasız / orijinal fotoğrafa yakın sahneler",
+                "ar": "مشاهد بدون ثيمة / قريبة من الصورة الأصلية"
+              }
+            },
+            {
+              "value": "astronaut",
+              "label": {
+                "tr": "Astronot",
+                "ar": "رائد فضاء"
+              }
+            },
+            {
+              "value": "footballer",
+              "label": {
+                "tr": "Futbolcu",
+                "ar": "لاعب كرة قدم"
+              }
+            },
+            {
+              "value": "doctor",
+              "label": {
+                "tr": "Doktor",
+                "ar": "طبيب"
+              }
+            },
+            {
+              "value": "police",
+              "label": {
+                "tr": "Polis",
+                "ar": "شرطي"
+              }
+            },
+            {
+              "value": "firefighter",
+              "label": {
+                "tr": "İtfaiyeci",
+                "ar": "رجل إطفاء"
+              }
+            },
+            {
+              "value": "superhero",
+              "label": {
+                "tr": "Süper Kahraman",
+                "ar": "بطل خارق"
+              }
+            },
+            {
+              "value": "racer",
+              "label": {
+                "tr": "Yarışçı",
+                "ar": "سائق سباق"
+              }
+            },
+            {
+              "value": "sea_explorer",
+              "label": {
+                "tr": "Deniz Kaşifi",
+                "ar": "مستكشف البحار"
+              }
+            },
+            {
+              "value": "dinosaur_explorer",
+              "label": {
+                "tr": "Dinozor Kaşifi",
+                "ar": "مستكشف الديناصورات"
+              }
+            },
+            {
+              "value": "princess",
+              "label": {
+                "tr": "Prenses",
+                "ar": "أميرة"
+              }
+            },
+            {
+              "value": "fantasy",
+              "label": {
+                "tr": "Peri / Fantezi",
+                "ar": "جنيات / خيال"
+              }
+            },
+            {
+              "value": "realistic_child",
+              "label": {
+                "tr": "Çocuğumun gerçek görünümüne yakın sahneler",
+                "ar": "مشاهد قريبة من المظهر الحقيقي للطفل"
+              }
+            },
+            {
+              "value": "other",
+              "label": {
+                "tr": "Diğer",
+                "ar": "أخرى"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_gift_purchase",
+          "code": "S6",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Bu ürünü hediye olarak satın alır mıydınız?",
+            "ar": "هل ستشتري هذا المنتج كهدية؟"
+          },
+          "options": [
+            {
+              "value": "yes",
+              "label": {
+                "tr": "Evet",
+                "ar": "نعم"
+              }
+            },
+            {
+              "value": "maybe",
+              "label": {
+                "tr": "Belki",
+                "ar": "ربما"
+              }
+            },
+            {
+              "value": "no",
+              "label": {
+                "tr": "Hayır",
+                "ar": "لا"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "purchase",
+      "title": {
+        "tr": "Bölüm 3 - Satın Alma Niyeti",
+        "ar": "القسم 3 - نية الشراء"
+      },
+      "questions": [
+        {
+          "id": "q_purchase_intent",
+          "code": "S7",
+          "type": "scale",
+          "required": true,
+          "prompt": {
+            "tr": "Böyle bir ürünü satın alma ihtimaliniz nedir?",
+            "ar": "ما احتمال شرائك لمنتج مثل هذا؟"
+          },
+          "options": [
+            {
+              "value": "1",
+              "score": 1,
+              "label": {
+                "tr": "1 - Kesinlikle satın almam",
+                "ar": "1 - لن أشتريه بالتأكيد"
+              }
+            },
+            {
+              "value": "2",
+              "score": 2,
+              "label": {
+                "tr": "2 - Düşük ihtimal",
+                "ar": "2 - احتمال ضعيف"
+              }
+            },
+            {
+              "value": "3",
+              "score": 3,
+              "label": {
+                "tr": "3 - Kararsızım",
+                "ar": "3 - متردد"
+              }
+            },
+            {
+              "value": "4",
+              "score": 4,
+              "label": {
+                "tr": "4 - Büyük ihtimalle satın alırım",
+                "ar": "4 - غالبا سأشتريه"
+              }
+            },
+            {
+              "value": "5",
+              "score": 5,
+              "label": {
+                "tr": "5 - Kesinlikle satın alırım",
+                "ar": "5 - سأشتريه بالتأكيد"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_purchase_occasions",
+          "code": "S8",
+          "type": "multi",
+          "required": true,
+          "allow_other": true,
+          "prompt": {
+            "tr": "Hangi durumda satın almayı düşünürsünüz? Çoklu seçim yapabilirsiniz.",
+            "ar": "في أي مناسبة قد تفكر في شرائه؟ يمكنك اختيار أكثر من خيار."
+          },
+          "options": [
+            {
+              "value": "birthday",
+              "label": {
+                "tr": "Doğum günü hediyesi",
+                "ar": "هدية عيد ميلاد"
+              }
+            },
+            {
+              "value": "special_day",
+              "label": {
+                "tr": "Bayram / özel gün hediyesi",
+                "ar": "هدية عيد / مناسبة خاصة"
+              }
+            },
+            {
+              "value": "holiday_activity",
+              "label": {
+                "tr": "Tatil aktivitesi",
+                "ar": "نشاط للعطلة"
+              }
+            },
+            {
+              "value": "surprise",
+              "label": {
+                "tr": "Sürpriz hediye",
+                "ar": "هدية مفاجئة"
+              }
+            },
+            {
+              "value": "memory",
+              "label": {
+                "tr": "Özel bir anıyı ölümsüzleştirmek için",
+                "ar": "لتخليد ذكرى خاصة"
+              }
+            },
+            {
+              "value": "other",
+              "label": {
+                "tr": "Diğer",
+                "ar": "أخرى"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_annual_frequency",
+          "code": "S9",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Bir çocuk için yılda kaç kez böyle bir ürün satın alabileceğinizi düşünüyorsunuz?",
+            "ar": "كم مرة في السنة قد تشتري منتجا مثل هذا لطفل واحد؟"
+          },
+          "options": [
+            {
+              "value": "1",
+              "label": {
+                "tr": "1 kez",
+                "ar": "مرة واحدة"
+              }
+            },
+            {
+              "value": "2_3",
+              "label": {
+                "tr": "2-3 kez",
+                "ar": "2-3 مرات"
+              }
+            },
+            {
+              "value": "4_5",
+              "label": {
+                "tr": "4-5 kez",
+                "ar": "4-5 مرات"
+              }
+            },
+            {
+              "value": "6_plus",
+              "label": {
+                "tr": "6+ kez",
+                "ar": "6 مرات أو أكثر"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "pricing",
+      "title": {
+        "tr": "Bölüm 4 - Fiyatlandırma",
+        "ar": "القسم 4 - التسعير"
+      },
+      "questions": [
+        {
+          "id": "q_price",
+          "code": "S10",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Böyle bir kitap için ne kadar ödemeyi makul bulursunuz?",
+            "ar": "ما السعر الذي تراه مناسبا لكتاب مثل هذا؟"
+          },
+          "options": [
+            {
+              "value": "99_149",
+              "label": {
+                "tr": "99-149 TL",
+                "ar": "99-149 ليرة تركية"
+              }
+            },
+            {
+              "value": "150_249",
+              "label": {
+                "tr": "150-249 TL",
+                "ar": "150-249 ليرة تركية"
+              }
+            },
+            {
+              "value": "250_399",
+              "label": {
+                "tr": "250-399 TL",
+                "ar": "250-399 ليرة تركية"
+              }
+            },
+            {
+              "value": "400_599",
+              "label": {
+                "tr": "400-599 TL",
+                "ar": "400-599 ليرة تركية"
+              }
+            },
+            {
+              "value": "600_plus",
+              "label": {
+                "tr": "600 TL+",
+                "ar": "600 ليرة تركية أو أكثر"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_page_count",
+          "code": "S11",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Boyama kitabı kaç sayfa olmalı?",
+            "ar": "كم صفحة يجب أن يحتوي كتاب التلوين؟"
+          },
+          "options": [
+            {
+              "value": "5",
+              "label": {
+                "tr": "5 sayfa",
+                "ar": "5 صفحات"
+              }
+            },
+            {
+              "value": "10",
+              "label": {
+                "tr": "10 sayfa",
+                "ar": "10 صفحات"
+              }
+            },
+            {
+              "value": "15",
+              "label": {
+                "tr": "15 sayfa",
+                "ar": "15 صفحة"
+              }
+            },
+            {
+              "value": "20",
+              "label": {
+                "tr": "20 sayfa",
+                "ar": "20 صفحة"
+              }
+            },
+            {
+              "value": "20_plus",
+              "label": {
+                "tr": "20 sayfadan fazla",
+                "ar": "أكثر من 20 صفحة"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_pdf_preference",
+          "code": "S12",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Kitabı daha uygun fiyatla PDF olarak indirme seçeneği olsa tercih eder miydiniz?",
+            "ar": "إذا توفر خيار تنزيل الكتاب بصيغة PDF بسعر أقل، هل تفضله؟"
+          },
+          "options": [
+            {
+              "value": "definitely_yes",
+              "label": {
+                "tr": "Kesinlikle evet",
+                "ar": "نعم بالتأكيد"
+              }
+            },
+            {
+              "value": "maybe",
+              "label": {
+                "tr": "Olabilir",
+                "ar": "ربما"
+              }
+            },
+            {
+              "value": "no",
+              "label": {
+                "tr": "Hayır, tercih etmem",
+                "ar": "لا، لا أفضله"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "value",
+      "title": {
+        "tr": "Bölüm 5 - Ürünün Değeri",
+        "ar": "القسم 5 - قيمة المنتج"
+      },
+      "questions": [
+        {
+          "id": "q_story_coloring",
+          "code": "S13",
+          "type": "single",
+          "required": true,
+          "prompt": {
+            "tr": "Bu ürün sadece boyama kitabı değil; kişiye özel hikayeli ve boyama etkinlikleri bir arada olsa ilginizi daha mı çekerdi?",
+            "ar": "إذا لم يكن هذا المنتج مجرد كتاب تلوين، بل جمع بين قصة مخصصة وأنشطة تلوين، هل سيكون أكثر جاذبية لك؟"
+          },
+          "options": [
+            {
+              "value": "much_more_interesting",
+              "label": {
+                "tr": "Evet, hikaye + boyama birlikte olsa çok daha ilgi çekici olurdu",
+                "ar": "نعم، القصة مع التلوين ستكون أكثر جاذبية بكثير"
+              }
+            },
+            {
+              "value": "coloring_only",
+              "label": {
+                "tr": "Hayır, sadece boyama kitabı yeterli",
+                "ar": "لا، كتاب التلوين وحده يكفي"
+              }
+            },
+            {
+              "value": "coloring_weighted",
+              "label": {
+                "tr": "Hikaye kısmı olsun ama boyama ağırlıklı olsun",
+                "ar": "أريد وجود قصة لكن يكون التركيز على التلوين"
+              }
+            },
+            {
+              "value": "story_weighted",
+              "label": {
+                "tr": "Boyama kısmı olsun ama hikaye ağırlıklı olsun",
+                "ar": "أريد وجود تلوين لكن يكون التركيز على القصة"
+              }
+            },
+            {
+              "value": "no_difference",
+              "label": {
+                "tr": "Fark etmez",
+                "ar": "لا فرق لدي"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_purchase_driver",
+          "code": "S14",
+          "type": "single",
+          "required": true,
+          "allow_other": true,
+          "prompt": {
+            "tr": "Bu ürünü satın almaya sizi en çok ne teşvik eder?",
+            "ar": "ما العامل الذي سيشجعك أكثر على شراء هذا المنتج؟"
+          },
+          "options": [
+            {
+              "value": "child_photo",
+              "label": {
+                "tr": "Çocuğumun fotoğrafının kullanılması",
+                "ar": "استخدام صورة طفلي"
+              }
+            },
+            {
+              "value": "personal_story",
+              "label": {
+                "tr": "Kişisel hikaye oluşturulması",
+                "ar": "إنشاء قصة شخصية"
+              }
+            },
+            {
+              "value": "educational",
+              "label": {
+                "tr": "Eğitici olması",
+                "ar": "أن يكون تعليميا"
+              }
+            },
+            {
+              "value": "number_coloring",
+              "label": {
+                "tr": "Sayılarla boyama özelliği",
+                "ar": "ميزة التلوين بالأرقام"
+              }
+            },
+            {
+              "value": "gift",
+              "label": {
+                "tr": "Hediye olarak kullanılabilmesi",
+                "ar": "إمكانية استخدامه كهدية"
+              }
+            },
+            {
+              "value": "fair_price",
+              "label": {
+                "tr": "Uygun fiyat",
+                "ar": "سعر مناسب"
+              }
+            },
+            {
+              "value": "other",
+              "label": {
+                "tr": "Diğer",
+                "ar": "أخرى"
+              }
+            }
+          ]
+        },
+        {
+          "id": "q_feature_request",
+          "code": "S15",
+          "type": "text_area",
+          "required": false,
+          "prompt": {
+            "tr": "Bu üründe görmek istediğiniz başka bir özellik var mı?",
+            "ar": "هل هناك ميزة أخرى ترغب في رؤيتها في هذا المنتج؟"
+          },
+          "placeholder": {
+            "tr": "Aklınıza gelen özellik, tema veya beklentiyi yazabilirsiniz.",
+            "ar": "يمكنك كتابة أي ميزة أو ثيمة أو توقع يخطر ببالك."
+          }
+        }
+      ]
+    }
+  ]
+}
