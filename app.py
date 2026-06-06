@@ -256,14 +256,21 @@ def inject_css(lang: str) -> None:
                     radial-gradient(circle at 85% 8%, rgba(239,76,120,0.12), transparent 24%),
                     radial-gradient(circle at 60% 92%, rgba(46,157,104,0.10), transparent 28%);
             }}
+            #MainMenu,
+            footer,
+            header[data-testid="stHeader"],
+            [data-testid="stToolbar"],
+            [data-testid="stDecoration"],
+            [data-testid="stStatusWidget"],
+            [data-testid="stSidebar"],
+            [data-testid="collapsedControl"] {{
+                display: none !important;
+                visibility: hidden !important;
+            }}
             .block-container {{
                 max-width: 1120px;
-                padding-top: 2rem;
+                padding-top: 0.85rem;
                 padding-bottom: 4rem;
-            }}
-            section[data-testid="stSidebar"] {{
-                direction: {direction};
-                text-align: {align};
             }}
             h1, h2, h3, p, label {{
                 letter-spacing: 0;
@@ -281,6 +288,14 @@ def inject_css(lang: str) -> None:
             [data-testid="stSelectbox"] {{
                 direction: {direction};
                 text-align: {align};
+            }}
+            [data-testid="stSegmentedControl"] {{
+                direction: ltr;
+                max-width: 260px;
+                margin: 0 0 0.7rem auto;
+            }}
+            [data-testid="stSegmentedControl"] label {{
+                white-space: nowrap;
             }}
             .hero {{
                 border: 1px solid var(--line);
@@ -420,6 +435,15 @@ def inject_css(lang: str) -> None:
                 text-align: end;
             }}
             @media (max-width: 760px) {{
+                .block-container {{
+                    padding-left: 1rem;
+                    padding-right: 1rem;
+                    padding-top: 0.4rem;
+                }}
+                [data-testid="stSegmentedControl"] {{
+                    max-width: 100%;
+                    margin-bottom: 0.45rem;
+                }}
                 .product-grid {{
                     grid-template-columns: 1fr;
                 }}
@@ -731,6 +755,33 @@ def get_admin_password() -> str | None:
     return None
 
 
+def language_from_query() -> str:
+    lang = str(st.query_params.get("lang", "tr")).lower()
+    return lang if lang in LANGUAGES else "tr"
+
+
+def render_language_selector(current_lang: str) -> str:
+    labels = list(LANGUAGE_CODES_BY_LABEL.keys())
+    current_label = LANGUAGES[current_lang]
+    selected_label = st.segmented_control(
+        "Dil / اللغة",
+        labels,
+        default=current_label,
+        key="language_selector",
+        label_visibility="collapsed",
+        width="stretch",
+    )
+    if not selected_label:
+        return current_lang
+
+    selected_lang = LANGUAGE_CODES_BY_LABEL[selected_label]
+    if selected_lang != current_lang:
+        st.query_params["lang"] = selected_lang
+        st.rerun()
+
+    return current_lang
+
+
 def current_path() -> str:
     url = st.context.url
     if not url:
@@ -894,12 +945,9 @@ def main() -> None:
     config = load_config()
     init_db()
 
-    language_label = st.sidebar.selectbox(
-        "Dil / اللغة",
-        options=list(LANGUAGE_CODES_BY_LABEL.keys()),
-    )
-    lang = LANGUAGE_CODES_BY_LABEL[language_label]
+    lang = language_from_query()
     inject_css(lang)
+    lang = render_language_selector(lang)
 
     if is_admin_path():
         render_dashboard(config, lang)
